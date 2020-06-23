@@ -1,4 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import {
+  ReactiveFormsModule,
+  Validator,
+  FormGroup,
+  FormControl,
+  Validators,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-home-page',
@@ -32,7 +39,23 @@ export class HomePageComponent implements OnInit {
     },
   ];
 
+  staffInput = new FormGroup({
+    imgSrc: new FormControl('', Validators.required),
+    brand: new FormControl('', Validators.required),
+    model: new FormControl('', Validators.required),
+  });
+
   constructor() {}
 
   ngOnInit(): void {}
+
+  onSubmit() {
+    if (this.staffInput.valid) {
+      let newCar = this.staffInput.value;
+
+      this.cars.push(newCar);
+
+      console.table(this.cars);
+    }
+  }
 }

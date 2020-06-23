@@ -2,28 +2,22 @@
   <form
     [formGroup]="contactInput"
     (ngSubmit)="onSend()"
-    class="d-flex flex-column justify-items-end"
+    class="d-flex flex-column justify-content-center"
   >
     <label>
       Name:
       <input type="text" formControlName="name" />
     </label>
 
-    <br />
-
     <label>
       Subject:
       <input type="text" formControlName="subject" />
     </label>
 
-    <br />
-
     <label>
       Message:
       <input type="text" formControlName="message" />
     </label>
-
-    <br />
 
     <input type="submit" class="btn btn-primary col-1" value="Send" />
   </form>

@@ -8,3 +8,30 @@
     ></app-car-card>
   </div>
 </div>
+
+<div class="container mt-5">
+  <h3 class="font-weight-bold">Staff Use Only</h3>
+
+  <form
+    [formGroup]="staffInput"
+    (ngSubmit)="onSubmit()"
+    class="d-flex flex-column justify-content-center"
+  >
+    <label>
+      Img. URL:
+      <input type="text" formControlName="imgSrc" />
+    </label>
+
+    <label>
+      Brand:
+      <input type="text" formControlName="brand" />
+    </label>
+
+    <label>
+      Model:
+      <input type="text" formControlName="model" />
+    </label>
+
+    <input type="submit" class="btn btn-primary col-1" value="Send" />
+  </form>
+</div>
