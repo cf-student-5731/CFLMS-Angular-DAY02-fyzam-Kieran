@@ -26,6 +26,12 @@
       </li>
     </ul>
 
+    <ng-template [ngIf]="totalDonated >= 200"
+      ><p class="text-light mx-auto my-auto">
+        VIP
+      </p></ng-template
+    >
+
     <button type="button" class="btn btn-primary" (click)="donate(10)">
       Donate 10€
     </button>
