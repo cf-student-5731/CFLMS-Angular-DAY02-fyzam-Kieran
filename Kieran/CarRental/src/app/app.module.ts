@@ -10,6 +10,8 @@ import { CarComponent } from './car/car.component';
 import { JumbotronComponent } from './jumbotron/jumbotron.component';
 import { CarCardComponent } from './car-card/car-card.component';
 
+import { ReactiveFormsModule, Validators } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,13 +20,10 @@ import { CarCardComponent } from './car-card/car-card.component';
     ContactPageComponent,
     CarComponent,
     JumbotronComponent,
-    CarCardComponent
+    CarCardComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
